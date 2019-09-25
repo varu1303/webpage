@@ -1,0 +1,144 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+/* Reset WebPage */
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ /* Font Styles get inherited throughout when we do this */
+ html {
+     font-size: 62.5%;
+ }
+ body { 
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.7;
+    color: #777;
+    padding: 30px; /* Does not get inherited, all above gets inherited */
+ }
+ 
+ .header {
+     position: relative;
+     height: 95vh;
+     background-image: linear-gradient(to right, rgb(126, 213, 111, .6), rgb(40, 180, 133, .6)) ,url('../img/hero.jpg');
+     background-size: cover;
+     background-position: top;
+     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+ }
+
+ .logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;    
+ }
+
+ .logo {
+    height: 25px;
+ }
+
+ .text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+ }
+
+ .heading-primary {
+     color: #fff;
+     text-transform: uppercase;
+     margin-bottom: 20px;
+
+     backface-visibility: hidden;
+ }
+
+ .heading-primary-main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 35px;
+    animation: moveInLeft 1s;
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+    animation: moveInRight 1s;
+ }
+
+ .btn,
+ .btn:link
+ .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 100px;
+    display: inline-block;
+    transition: all .2s;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+ .btn-white {
+     color: #777;
+     background-color: #fff;
+ }
+
+ @keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80% {
+        opacity: .8;
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+ }
+
+ @keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80% {
+        opacity: .8;
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+ }
+
+ @media only screen and (max-width: 500px) {
+     html {
+         font-size: 5px !important;
+     }
+
+     .heading-primary-main {
+        letter-spacing: 12px;
+     }
+ }
