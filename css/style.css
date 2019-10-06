@@ -24,12 +24,61 @@ Dark green: #28b485
     font-size: 1.5rem;
     line-height: 1.7;
     color: #777;
-    padding: 30px; /* Does not get inherited, all above gets inherited */
+    overflow-x: hidden;
+    padding: 30px; 
+    /* Does not get inherited, all above gets inherited */
  }
+
+ .fixed_nav {
+     transform: translateY(-50%);
+     z-index: 100;
+     padding: 5px;
+     background-color: black;
+ }
+
+ .fixed_nav a{
+    display: block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-top: 3px;
+    margin-right: 0;
+    /* margin-bottom: 5px; */
+}
+
+
+
+@media only screen and (min-width: 801px) {
+    .fixed_nav {
+        position: fixed;
+        top: 50%;
+        right: 0;
+    }
+}
+ @media only screen and (max-width: 800px) {
+    .fixed_nav {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .fixed_nav a{
+        display: inline-block;
+        margin-right: 3px;
+        margin-top: 0;
+    }
+}
  
  .header {
      position: relative;
-     height: 95vh;
+     height: 90vh;
      background-image: linear-gradient(to right, rgb(126, 213, 111, .6), rgb(40, 180, 133, .6)) ,url('../img/hero.jpg');
      background-size: cover;
      background-position: top;
@@ -78,6 +127,15 @@ Dark green: #28b485
     animation: moveInRight 1s;
  }
 
+ .heading-info {
+    margin-top: 2rem;
+    color: #fff;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: .5rem;
+ }
+
  .btn,
  .btn:link
  .btn:visited {
@@ -102,6 +160,100 @@ Dark green: #28b485
      color: #777;
      background-color: #fff;
  }
+
+ .facility {
+     width: 100%;
+     /* border: 5px solid yellow; */
+     display: flex;
+     justify-content:space-evenly;
+     padding: 5rem;
+ }
+
+ .facility-holder {
+    flex-basis: 15%;
+    /* border: 5px solid blue; */
+    text-align: center;
+ }
+
+ .features {
+     width: 100%;
+     position: relative;
+ }
+
+ .feature_background {
+     position: absolute;
+     width: 100%;
+     height: 120%;
+     background-image: linear-gradient(to right, rgb(126, 213, 111, .6), rgb(40, 180, 133, .6));
+     background-size: cover;
+     background-position: top;
+     clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 70%);
+     z-index: -10;
+     /* margin-top: 375px; */
+ }
+ .features-container {
+     width: 100%;
+ }
+
+ .feature-holder {
+    display: flex;
+    width: 85%;
+    height: 500px;
+    /* padding: 2rem; */
+    margin: 2rem auto;
+}
+
+.box  {
+    transition: all .3s ease-in;
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+
+.box:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.6); 
+}
+
+.feature-image {
+    flex: 2;
+}
+
+.feature-image-1 {
+    background-image: url('../img/nat-1-large.jpg');
+    background-size: cover;
+    background-position: top;
+}
+
+.feature-image-2 {
+    background-image: url('../img/nat-2-large.jpg');
+    background-size: cover;
+    background-position: top;
+}
+
+.feature-image-3 {
+    background-image: url('../img/nat-3-large.jpg');
+    background-size: cover;
+    background-position: top;
+}
+
+.feature-text {
+    flex: 1;
+    /* border: 5px solid pink; */
+    display: flex;
+    background-color: #fff;
+}
+
+.inner-text {
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.inner-text p {
+    margin-bottom: 10px;
+}
+
+.btn-pop {
+    background-color: #ddd;
+}
 
  @keyframes moveInLeft {
     0% {
@@ -141,4 +293,31 @@ Dark green: #28b485
      .heading-primary-main {
         letter-spacing: 12px;
      }
+
+ }
+
+ @media only screen and (max-width: 800px) {
+
+    body {
+        padding: 5px;
+    }
+     
+    .feature-holder {
+        display: block;
+     }
+
+     .feature-image {
+        height: 50%;
+    }
+    
+    .feature-text {
+        height: 50%;
+    }
+    .facility {
+        padding: 2rem;
+    }
+
+    .facility-holder {
+        flex-basis: 24%;
+    }
  }

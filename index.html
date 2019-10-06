@@ -8,11 +8,22 @@
 
         <link rel="stylesheet" href="css/icon-font.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/form.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/popup.css">
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         
         <title>Natours | Exciting tours for adventurous people</title>
     </head>
     <body>
+
+        <div class="fixed_nav">
+            <a href="#" ><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+        </div>
         
         <header class="header">
             <div class="logo-box">
@@ -29,9 +40,212 @@
                     </span>
                 </h1>
 
-                <a href="#" class="btn btn-white">CHECKOUT ROOMS</a>
+                <a href="#rooms" class="btn btn-white">CHECKOUT ROOMS</a>
+
+                <!-- <h3> -->
+                    <span class="heading-info">
+                                Time: 2300 | Temperature: 23 
+                    </span>
+                <!-- </h3> -->
+
             </div>
         </header>
-        
+
+        <h2>Amenities</h2>
+        <section class="facility">
+
+            <div class="box facility-holder">
+                    <i class="fab fa-facebook-f"></i> Parking Facility
+
+            </div>
+            <div class="box facility-holder">
+                    <i class="fa fa-twitter"></i> Elevator
+            </div>
+            <div class="box facility-holder">
+                    <i class="fa fa-twitter"></i> Restaurant
+            </div>
+            <div class="box facility-holder">
+                    <i class="fa fa-twitter"></i> Geyser
+            </div>
+        </section>
+
+        <section id="rooms" class="features">
+            <div class="feature_background">
+                
+            </div>
+            <div class="features-container">
+                <div class="box feature-holder">
+                    <div class="feature-image feature-image-1">
+                        
+                    </div>
+                    <div class="feature-text">
+                        <div class="inner-text">
+                            <p>Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.</p>
+                            <p>Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.</p>
+                            <a class="btn btn-white btn-pop feature-pop-btn-1"  onclick="showPop()">CHECKOUT IMAGES</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="box feature-holder">
+                    <div class="feature-image feature-image-2">
+                        
+                    </div>
+                    <div class="feature-text">
+                        <div class="inner-text">
+                            <p>Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.</p>
+                            <p>Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.</p>
+                            <a class="btn btn-white btn-pop feature-pop-btn-2"  onclick="showPop()">CHECKOUT IMAGES</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="box feature-holder">
+                    <div class="feature-image feature-image-3">
+                        
+                    </div>
+                    <div class="feature-text">
+                        <div class="inner-text">
+                                <p>Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.</p>
+                                <p>Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.</p>
+                                    <a class="btn btn-white btn-pop feature-pop-btn-3"  onclick="showPop()">CHECKOUT IMAGES</a>
+                                </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-images-popup-1 hidePop">
+                <div class="popup-images-holder">
+                        <!-- <div class="slideshow-container"> -->
+
+                                <!-- Full-width images with number and caption text -->
+                                <div class="mySlides fade">
+                                  <div class="numbertext">1 / 3</div>
+                                  <img src="img/nat-1-large.jpg" style="width:100%">
+                                  <div class="text">Caption Text</div>
+                                </div>
+                              
+                                <div class="mySlides fade">
+                                  <div class="numbertext">2 / 3</div>
+                                  <img src="img/nat-2-large.jpg" style="width:100%">
+                                  <div class="text">Caption Two</div>
+                                </div>
+                              
+                                <div class="mySlides fade">
+                                  <div class="numbertext">3 / 3</div>
+                                  <img src="img/nat-4.jpg" style="width:100%">
+                                  <div class="text">Caption Three</div>
+                                </div>
+                              
+                                <a class="closeBtn" onclick="closePop()"><i class="fa fa-times"></i></a>
+                                <!-- Next and previous buttons -->
+                                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                              </div>
+                              <br>
+                              
+                              <!-- The dots/circles -->
+                              <!-- <div style="text-align:center">
+                                <span class="dot" onclick="currentSlide(1)"></span>
+                                <span class="dot" onclick="currentSlide(2)"></span>
+                                <span class="dot" onclick="currentSlide(3)"></span>
+                              </div> -->
+                <!-- </div> -->
+            </div>
+
+
+        </section>
+
+        <div class="cont">
+            <div class="form sign-in">
+                <div class="form_panel">
+                    <h2>Have a Query?</h2>
+                    <h3>Drop us a message!</h3>
+                    <label>
+                        <span>Name</span>
+                        <input type="text" />
+                    </label>
+                    <label>
+                        <span>Email</span>
+                        <input type="email" />
+                    </label>
+                    <label>
+                        <span>Message</span>
+                        <input type="text" />
+                    </label>
+                    <!-- <p class="forgot-pass">Forgot password?</p> -->
+                    <button type="button" class="submit">Submit</button>
+                </div>
+
+                <div class="side_panel">
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <footer class="footer-distributed">
+
+			<div class="footer-left">
+
+                <img class="logo" src="img/logo-white.png" />
+
+				<p class="footer-links">            
+                    <a href="#" class="link-1"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-github"></i></a>
+					<!-- <a href="#" class="link-1">Home</a>
+					
+					<a href="#">Pricing</a>
+				
+					<a href="#">About</a>
+					
+					<a href="#">Faq</a> -->
+
+				</p>
+
+				<p class="footer-company-name">Company Name © 2019</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>ABC</span> Banaras, UP</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+1.555.555.5555</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@company.com">support@company.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>About the company</span>
+					Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+				</p>
+
+				<div class="footer-icons">
+					<a href="#" ><i class="fab fa-facebook-f"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+		</footer>
+
+        <script src="js/slider.js"></script>
     </body>
 </html>
